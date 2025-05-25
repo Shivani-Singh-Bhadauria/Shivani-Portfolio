@@ -1,0 +1,84 @@
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Github, Linkedin, Mail } from "lucide-react";
+
+export default function Portfolio() {
+  return (
+    <div className="min-h-screen bg-white text-gray-900 px-6 py-10 font-sans">
+      <header className="bg-pink-600 text-white p-6 rounded-2xl shadow-lg text-center mb-16">
+        <h1 className="text-4xl font-extrabold mb-2">🛍️ Welcome to Shivani's Dev Store</h1>
+        <p className="text-lg">Find the best deals on projects, skills & certifications!</p>
+      </header>
+
+      <section className="mb-20">
+        <h2 className="text-2xl font-bold mb-6 border-b-2 border-pink-500 inline-block">🧾 About Me</h2>
+        <Card className="max-w-3xl mx-auto bg-pink-100 border-pink-300">
+          <CardContent className="p-6">
+            <p>
+              Shivani Singh, Associate Software Engineer at Accenture. Passionate about Java, Spring Boot, REST APIs, and certified in Cybersecurity & Cloud (AWS/GCP). Enthusiastic about solving real-world problems and building secure, scalable software.
+            </p>
+          </CardContent>
+        </Card>
+      </section>
+
+      <section className="mb-20">
+        <h2 className="text-2xl font-bold mb-6 border-b-2 border-pink-500 inline-block">🧰 Skills</h2>
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          {["Python", "Java", "Spring Boot", "Microservices", "REST API", "MySQL", "GitHub", "DSA", "OOPs"].map(skill => (
+            <div key={skill} className="bg-white border border-gray-200 p-6 rounded-xl shadow hover:shadow-lg text-center">
+              <span className="text-lg font-medium">{skill}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="mb-20">
+        <h2 className="text-2xl font-bold mb-6 border-b-2 border-pink-500 inline-block">🧪 Featured Projects</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <Card className="bg-white border border-gray-300 shadow-sm hover:shadow-xl">
+            <CardContent className="p-6">
+              <h3 className="text-xl font-bold text-pink-700 mb-2">Clever Crypto</h3>
+              <p className="text-gray-700 mb-4">Flask-based secure file storage with AWS S3, AES + RSA encryption. Keeps your files locked and safe like a vault!</p>
+              <Button variant="outline" className="bg-pink-500 text-white hover:bg-pink-600">
+                <a href="https://github.com/Shivani-Singh-Bhadauria/secure-file-storage-flask-app" target="_blank">View on GitHub</a>
+              </Button>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-white border border-gray-300 shadow-sm hover:shadow-xl">
+            <CardContent className="p-6">
+              <h3 className="text-xl font-bold text-pink-700 mb-2">Species</h3>
+              <p className="text-gray-700 mb-4">A colorful website showcasing bird species using HTML, CSS, JS & Tailwind. Great UI & completely responsive!</p>
+              <Button variant="outline" className="bg-pink-500 text-white hover:bg-pink-600">
+                <a href="https://shivani-singh-bhadauria.github.io/Species/" target="_blank">View Project</a>
+              </Button>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      <section className="mb-20">
+        <h2 className="text-2xl font-bold mb-6 border-b-2 border-pink-500 inline-block">🎓 Certifications</h2>
+        <ul className="text-gray-700 space-y-4 max-w-2xl mx-auto list-disc pl-5">
+          <li><a href="https://www.credly.com/badges/75e97e35-b754-4947-9883-27234c82dcb7/linked_in?t=svs6lg" target="_blank" className="text-pink-600 hover:underline">CyberSecurity Certification (Cisco)</a></li>
+          <li><a href="https://drive.google.com/file/d/1Y05NShfRax0xuUPATvRNJOEEl4XcQgze/view?pli=1" target="_blank" className="text-pink-600 hover:underline">Cloud Practitioner Essentials (AWS)</a></li>
+          <li><a href="https://www.credly.com/earner/earned/badge/91c55db8-039b-460d-acc9-f9049be3f5ff" target="_blank" className="text-pink-600 hover:underline">Cloud Digital Leader (GCP)</a></li>
+        </ul>
+      </section>
+
+      <section className="mb-20 text-center">
+        <h2 className="text-2xl font-bold mb-6 border-b-2 border-pink-500 inline-block">📞 Contact Me</h2>
+        <p className="text-gray-600 mb-4">Looking for an engineer? Let’s chat!</p>
+        <div className="flex justify-center gap-8">
+          <a href="mailto:shivanisingh1st@gmail.com" className="text-pink-600 hover:text-pink-800"><Mail size={28} /></a>
+          <a href="https://github.com/Shivani-Singh-Bhadauria" target="_blank" className="text-pink-600 hover:text-pink-800"><Github size={28} /></a>
+          <a href="https://www.linkedin.com/in/shivani-singh-bhadauria12/" target="_blank" className="text-pink-600 hover:text-pink-800"><Linkedin size={28} /></a>
+        </div>
+      </section>
+
+      <footer className="text-center text-sm text-gray-400">
+        &copy; 2025 Shivani Singh. Styled like your favorite shopping cart experience 🛒
+      </footer>
+    </div>
+  );
+}
